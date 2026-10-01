@@ -12,6 +12,18 @@ python3 -m http.server 4173 --directory dist
 
 Then open <http://localhost:4173>.
 
+## Deploy (GitHub Pages)
+
+站点是纯静态的（`dist/` 目录），已附带 GitHub Actions 工作流自动部署。
+
+1. 推送 `main` 分支到 GitHub。
+2. 打开仓库 **Settings → Pages**。
+3. 把 **Source** 设为 **GitHub Actions**。
+4. 推送后工作流会自动运行，站点发布在
+   `https://<用户名>.github.io/reactor-audio-visualizer/`。
+
+工作流定义见 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)。
+
 ## Notes
 
 This is an audiovisual interaction experiment. It is not a physical simulation of a reactor, and audio is processed locally in the browser.
